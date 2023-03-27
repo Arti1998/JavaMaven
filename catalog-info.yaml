@@ -4,7 +4,7 @@ metadata:
   name: ${{ values.name | dump }}
   annotations:
     #  github.com/project-slug: Arti1998/CICD-JavaWebApp
-     github.com/project-slug:  ${{ steps['publish'].output.remoteUrl }}
+     github.com/project-slug:  ${{ remoteUrl }}
 spec:
   type: service
   owner: user:guest
