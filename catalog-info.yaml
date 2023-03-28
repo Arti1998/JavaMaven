@@ -3,8 +3,8 @@ kind: Component
 metadata:
   name: ${{ values.name | dump }}
   annotations:
-#      github.com/project-slug:  ${{ steps['publish'].output.remoteUrl }}
-     github.com/project-slug: {{cookiecutter.destination.owner + "/" + cookiecutter.destination.repo}} 
+     github.com/project-slug:  ${{ steps['publish'].output.remoteUrl | dump }}
+#      github.com/project-slug: {{cookiecutter.destination.owner + "/" + cookiecutter.destination.repo}} 
      backstage.io/techdocs-ref: dir:.
 spec:
   type: service
